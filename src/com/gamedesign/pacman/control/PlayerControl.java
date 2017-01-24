@@ -39,6 +39,31 @@ public class PlayerControl extends AbstractControl
         gameEntity.getView().setScaleX(1);
     }
 
+    public void left()
+    {
+        moveDirection = MoveDirection.LEFT;
+        move(-1 * v * PACMAN_SPEED, 0);
+        gameEntity.getRotationComponent().setValue(0);
+        gameEntity.getView().setScaleX(-1);
+    }
+
+    public void down()
+    {
+        moveDirection = MoveDirection.DOWN;
+        move(0, 1 * v * PACMAN_SPEED);
+        gameEntity.getRotationComponent().setValue(90);
+        gameEntity.getView().setScaleX(1);
+    }
+
+    public void right()
+    {
+        moveDirection = MoveDirection.RIGHT;
+        move(1 * v * PACMAN_SPEED, 0);
+        gameEntity.getRotationComponent().setValue(0);
+        gameEntity.getView().setScaleX(1);
+    }
+
+
     private List<Entity> blocks;
 
     private void move(double dx, double dy)
@@ -65,7 +90,7 @@ public class PlayerControl extends AbstractControl
             for (Entity block : blocks)
             {
                 if(Entities.getBBox(block)
-                        .isCollidingWith(gameEntity.getBoundingBoxComponent())
+                        .isCollidingWith(gameEntity.getBoundingBoxComponent()))
                 {
                     collision = true;
                     break;

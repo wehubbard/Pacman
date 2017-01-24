@@ -2,12 +2,28 @@ package com.gamedesign.pacman;
 
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
+import com.almasb.fxgl.entity.GameEntity;
+import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.settings.GameSettings;
+import com.gamedesign.pacman.control.PlayerControl;
+import com.gamedesign.pacman.type.EntityType;
 
 import static com.gamedesign.pacman.Config.*;
 
 public class PacmanApp extends GameApplication
 {
+    public GameEntity player()
+    {
+        return (GameEntity) getGameWorld()
+                .getEntitiesByType(EntityType.PLAYER)
+                .get(0);
+    }
+
+    public PlayerControl playerControl()
+    {
+        return player().getControlUnsafe(PlayerControl.class);
+    }
+
     @Override
     protected void initSettings(GameSettings gameSettings)
     {
@@ -25,7 +41,44 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initInput()
     {
+//        PlayerControl playerControl =
+//                player().getControlUnsafe(PlayerControl.class);
 
+        getInput().addAction(new UserAction("Up")
+        {
+            @Override
+            protected void onAction()
+            {
+                playerControl().up();
+            }
+        }, UP_KEY);
+
+        getInput().addAction(new UserAction("Left")
+        {
+            @Override
+            protected void onAction()
+            {
+                playerControl().left();
+            }
+        }, LEFT_KEY);
+
+        getInput().addAction(new UserAction("Down")
+        {
+            @Override
+            protected void onAction()
+            {
+                playerControl().down();
+            }
+        }, DOWN_KEY);
+
+        getInput().addAction(new UserAction("Right")
+        {
+            @Override
+            protected void onAction()
+            {
+                playerControl().right();
+            }
+        }, RIGHT_KEY);
     }
 
     @Override

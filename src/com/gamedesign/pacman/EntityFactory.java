@@ -5,6 +5,7 @@ import com.almasb.fxgl.entity.GameEntity;
 import com.almasb.fxgl.entity.component.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
+import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -21,7 +22,7 @@ public class EntityFactory
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2)))
                 .viewFromNode(new Circle(BLOCK_SIZE / 2, Color.YELLOW))
                 .with(new CollidableComponent(true))
-                //.with(new PlayerControl())
+                .with(new PlayerControl())
                 .build();
     }
 }

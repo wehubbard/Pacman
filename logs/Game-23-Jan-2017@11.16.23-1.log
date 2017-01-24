@@ -1,0 +1,19 @@
+11:12:49.565 [FXGL Launcher Thread     ] DEBUG FXGLLoggerFactory    - Service [LoggerFactory] initialized
+11:12:49.571 [FXGL Launcher Thread     ] DEBUG FXGL                 - FXGL configuration complete
+11:12:49.572 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+11:12:49.576 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+11:12:49.579 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system\fxgl.bundle
+11:12:49.586 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+11:12:49.586 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+11:12:49.586 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2017-01-18T11:24:23.393
+11:12:49.632 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+11:12:49.638 [FXGL Launcher Thread     ] DEBUG FXGLExceptionHandler - Service [ExceptionHandler] initialized
+11:12:49.639 [FXGL Launcher Thread     ] DEBUG FXGLEventBus         - Service [EventBus] initialized
+11:12:49.643 [FXGL Launcher Thread     ] DEBUG FXGLExecutor         - Service [Executor] initialized
+11:12:49.643 [FXGL Launcher Thread     ] DEBUG PreInitTask          - Injecting gameWorld & physicsWorld
+11:12:49.653 [FXGL Launcher Thread     ] DEBUG GameWorld            - Game world initialized
+11:12:49.714 [FXGL Launcher Thread     ] DEBUG FXGLPooler           - Service [Pooler] initialized with default size = 128
+11:12:49.714 [FXGL Launcher Thread     ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=840.0, physics.ppm=50.0
+11:12:49.717 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Service [Input] initialized
+11:12:49.737 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Screenshot - P
+11:12:49.737 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Dev Options - CTRL+0
