@@ -91,6 +91,10 @@ public class PacmanApp extends GameApplication
     protected void initGame()
     {
         getGameWorld().addEntity(EntityFactory.newPlayer(2, 2));
+
+        for(int i = 10; i < getWidth() / BLOCK_SIZE; i++)
+            for(int k = 10; k < getHeight() / BLOCK_SIZE; k++)
+                getGameWorld().addEntity(EntityFactory.newBlock(i, k));
     }
 
     @Override
