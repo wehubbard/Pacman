@@ -3,7 +3,9 @@ package com.gamedesign.pacman;
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.entity.GameEntity;
+import com.almasb.fxgl.gameplay.Level;
 import com.almasb.fxgl.input.UserAction;
+import com.almasb.fxgl.parser.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
@@ -90,11 +92,13 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initGame()
     {
-        getGameWorld().addEntity(EntityFactory.newPlayer(2, 2));
+        TextLevelParser textLevelParser = new TextLevelParser();
+        textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
+        textLevelParser.addEntityProducer('P', EntityFactory::newPlayer);
 
-        for(int i = 10; i < getWidth() / BLOCK_SIZE; i++)
-            for(int k = 10; k < getHeight() / BLOCK_SIZE; k++)
-                getGameWorld().addEntity(EntityFactory.newBlock(i, k));
+        Level level = textLevelParser.parse("level.txt");
+
+        getGameWorld().setLevel(level);
     }
 
     @Override
