@@ -2,13 +2,17 @@ package com.gamedesign.pacman;
 
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
+import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.GameEntity;
+import com.almasb.fxgl.entity.RenderLayer;
 import com.almasb.fxgl.gameplay.Level;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 import static com.gamedesign.pacman.Config.*;
 
@@ -92,9 +96,16 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initGame()
     {
+        GameEntity gameEntity =
+                Entities.builder()
+                        .viewFromNode(new Rectangle(getWidth(), getHeight()))
+                        .buildAndAttach(getGameWorld());
+        gameEntity.setRenderLayer(RenderLayer.BACKGROUND);
+
         TextLevelParser textLevelParser = new TextLevelParser();
-        textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
         textLevelParser.addEntityProducer('P', EntityFactory::newPlayer);
+        textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
+        textLevelParser.addEntityProducer(' ', EntityFactory::newPellet);
 
         Level level = textLevelParser.parse("level.txt");
 

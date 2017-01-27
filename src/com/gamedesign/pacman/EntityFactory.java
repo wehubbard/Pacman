@@ -37,8 +37,8 @@ public class EntityFactory
         return Entities.builder()
                 .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
                 .type(EntityType.PLAYER)
-                .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2)))
-                .viewFromNode(new Circle(BLOCK_SIZE / 2, Color.YELLOW))
+                .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
+                .viewFromNode(new Circle(BLOCK_SIZE / 2 - 2, Color.YELLOW))
                 .with(new CollidableComponent(true))
                 .with(new PlayerControl())
                 .build();
@@ -47,13 +47,28 @@ public class EntityFactory
     public static GameEntity newBlock(double x, double y)
     {
         EntityView entityView =
-                new EntityView(new Rectangle(BLOCK_SIZE, BLOCK_SIZE));
+                new EntityView(new Rectangle(BLOCK_SIZE, BLOCK_SIZE, Color.NAVY));
         entityView.setRenderLayer(RenderLayer.BACKGROUND);
 
         return Entities.builder()
                 .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
                 .type(EntityType.BLOCK)
                 .viewFromNodeWithBBox(entityView)
+                .build();
+    }
+
+    public static GameEntity newPellet(double x, double y)
+    {
+        EntityView entityView = new EntityView(new Circle(PELLET_SIZE, Color.GOLDENROD));
+        entityView.setRenderLayer(RenderLayer.BACKGROUND);
+
+        return Entities.builder()
+                .at(x * BLOCK_SIZE + BLOCK_SIZE / 2 - PELLET_SIZE / 2,
+                        y * BLOCK_SIZE + BLOCK_SIZE / 2 - PELLET_SIZE / 2)
+                .type(EntityType.PELLET)
+                //.bbox(new HitBox("BODY", BoundingShape.circle(PELLET_SIZE)))
+                .viewFromNodeWithBBox(entityView)
+                .with(new CollidableComponent(true))
                 .build();
     }
 }
