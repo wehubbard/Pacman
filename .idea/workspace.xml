@@ -2,28 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e23d3c-4ecc-4041-bbd5-5e455b033f4d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-23 Jan 2017 11-16-21-383.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-23 Jan 2017 11-16-58-529.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-23 Jan 2017 11-17-17-885.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-23 Jan 2017 11-28-12-977.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-24 Jan 2017 11-29-38-128.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-23-Jan-2017@11.16.23-1.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-23-Jan-2017@11.17.00-1.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-23-Jan-2017@11.17.20-1.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-23-Jan-2017@11.28.15-1.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-24-Jan-2017@11.29.40-1.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-26 Jan 2017 11-09-29-035.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-26 Jan 2017 11-11-28-720.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-26 Jan 2017 11-26-27-597.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/FXGL-26 Jan 2017 11-27-13-459.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-26-Jan-2017@11.09.31-1.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-26-Jan-2017@11.11.30-1.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-26-Jan-2017@11.26.29-1.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/logs/Game-26-Jan-2017@11.27.15-1.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/EntityFactory$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/Config.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/Config.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/EntityFactory.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/EntityFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$1.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$2.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$3.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$4.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/PacmanApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/type/EntityType.class" afterPath="$PROJECT_DIR$/out/production/Pacman/com/gamedesign/pacman/type/EntityType.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/Game.log" afterPath="$PROJECT_DIR$/logs/Game.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java" afterPath="$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gamedesign/pacman/EntityFactory.java" afterPath="$PROJECT_DIR$/src/com/gamedesign/pacman/EntityFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gamedesign/pacman/PacmanApp.java" afterPath="$PROJECT_DIR$/src/com/gamedesign/pacman/PacmanApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java" afterPath="$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java" />
     </list>
     <ignored path="Pacman.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +45,8 @@
       <file leaf-file-name="PacmanApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/PacmanApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34361234">
-              <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.2043628">
+              <caret line="106" column="70" selection-start-line="106" selection-start-column="70" selection-end-line="106" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -81,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/EntityFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+              <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="32" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -103,8 +100,10 @@
         <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="57" />
-              <folding />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,21 +139,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java" />
         <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/MoveDirection.java" />
         <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/control/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/assets/text/level.txt" />
         <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java" />
+        <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java" />
         <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/EntityFactory.java" />
         <option value="$PROJECT_DIR$/src/com/gamedesign/pacman/PacmanApp.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="315" />
-    <option name="y" value="-609" />
-    <option name="width" value="818" />
-    <option name="height" value="618" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -614,30 +613,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="315" y="-609" width="818" height="618" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.68172485" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.01632209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.6869469" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.31827515" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.3130531" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.030800821" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854208" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -708,7 +707,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="57" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -768,7 +769,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -820,7 +823,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -872,7 +877,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="54" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +931,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -976,7 +985,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1010,23 +1021,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="57" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1056,10 +1053,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/type/EntityType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/EntityFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+          <caret line="74" column="1" selection-start-line="74" selection-start-column="1" selection-end-line="74" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1068,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gamedesign/pacman/PacmanApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34361234">
-          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.2043628">
+          <caret line="106" column="70" selection-start-line="106" selection-start-column="70" selection-end-line="106" selection-end-column="70" />
           <folding />
         </state>
       </provider>

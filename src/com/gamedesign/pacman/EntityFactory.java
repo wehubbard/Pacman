@@ -1,5 +1,6 @@
 package com.gamedesign.pacman;
 
+import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.EntityView;
 import com.almasb.fxgl.entity.GameEntity;
@@ -17,21 +18,6 @@ import static com.gamedesign.pacman.Config.*;
 
 public class EntityFactory
 {
-    private static RenderLayer backGround = new RenderLayer()
-    {
-        @Override
-        public String name()
-        {
-            return "Background";
-        }
-
-        @Override
-        public int index()
-        {
-            return 0;
-        }
-    };
-
     public static GameEntity newPlayer(double x, double y)
     {
         return Entities.builder()
@@ -48,7 +34,7 @@ public class EntityFactory
     {
         EntityView entityView =
                 new EntityView(new Rectangle(BLOCK_SIZE, BLOCK_SIZE, Color.NAVY));
-        entityView.setRenderLayer(RenderLayer.BACKGROUND);
+        entityView.setRenderLayer(PLAYGROUND);
 
         return Entities.builder()
                 .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
@@ -60,7 +46,7 @@ public class EntityFactory
     public static GameEntity newPellet(double x, double y)
     {
         EntityView entityView = new EntityView(new Circle(PELLET_SIZE, Color.GOLDENROD));
-        entityView.setRenderLayer(RenderLayer.BACKGROUND);
+        entityView.setRenderLayer(PLAYGROUND);
 
         return Entities.builder()
                 .at(x * BLOCK_SIZE + BLOCK_SIZE / 2 - PELLET_SIZE / 2,
@@ -70,6 +56,21 @@ public class EntityFactory
                 .viewFromNodeWithBBox(entityView)
                 .with(new CollidableComponent(true))
                 .build();
+    }
+
+    public static GameEntity newBackground(Color color)
+    {
+        double width = FXGL.getApp().getWidth();
+        double height = FXGL.getApp().getHeight();
+
+        GameEntity gameEntity =
+                Entities.builder()
+                        .type(EntityType.BACKGROUND)
+                        .viewFromNode(new Rectangle(width, height, color))
+                        .build();
+        gameEntity.setRenderLayer(BACKGROUND);
+
+        return gameEntity;
     }
 }
 

@@ -96,12 +96,6 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initGame()
     {
-        GameEntity gameEntity =
-                Entities.builder()
-                        .viewFromNode(new Rectangle(getWidth(), getHeight()))
-                        .buildAndAttach(getGameWorld());
-        gameEntity.setRenderLayer(RenderLayer.BACKGROUND);
-
         TextLevelParser textLevelParser = new TextLevelParser();
         textLevelParser.addEntityProducer('P', EntityFactory::newPlayer);
         textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
@@ -110,6 +104,7 @@ public class PacmanApp extends GameApplication
         Level level = textLevelParser.parse("level.txt");
 
         getGameWorld().setLevel(level);
+        getGameWorld().addEntity(EntityFactory.newBackground(Color.BLACK));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.gamedesign.pacman;
 
+import com.almasb.fxgl.entity.RenderLayer;
 import javafx.scene.input.KeyCode;
 
 public class Config
@@ -15,4 +16,41 @@ public class Config
     public static final int PELLET_SIZE = BLOCK_SIZE / 8;
 
     public static final int PACMAN_SPEED = 5 * 60;
+
+    public static final RenderLayer BACKGROUND = new RenderLayer()
+    {
+        @Override
+        public String name() { return "BACKGROUND"; }
+
+        @Override
+        public int index() { return 0; }
+    };
+
+    public static final RenderLayer PLAYGROUND = new RenderLayer()
+    {
+        @Override
+        public String name() { return "PLAYGROUND"; }
+
+        @Override
+        public int index() { return Integer.MAX_VALUE / 2; }
+    };
+
+    public static final RenderLayer FOREGROUND = new RenderLayer()
+    {
+        @Override
+        public String name() { return "FOREGROUND"; }
+
+        @Override
+        public int index() { return Integer.MAX_VALUE;}
+    };
 }
+
+
+
+
+
+
+
+
+
+
