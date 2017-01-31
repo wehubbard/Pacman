@@ -9,8 +9,10 @@ import com.almasb.fxgl.gameplay.Level;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
+import com.gamedesign.pacman.collision.PlayerPelletHandler;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
+import javafx.beans.property.IntegerProperty;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -18,6 +20,8 @@ import static com.gamedesign.pacman.Config.*;
 
 public class PacmanApp extends GameApplication
 {
+    private IntegerProperty score;
+
     public GameEntity player()
     {
         return (GameEntity) getGameWorld()
@@ -110,11 +114,16 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initPhysics()
     {
-
+        getPhysicsWorld().addCollisionHandler(new PlayerPelletHandler());
     }
 
     @Override
     protected void initUI()
+    {
+
+    }
+
+    public void onPelletPickup()
     {
 
     }

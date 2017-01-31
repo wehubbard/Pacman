@@ -15,6 +15,9 @@ public class Config
     public static final int UI_SIZE = 200;
     public static final int PELLET_SIZE = BLOCK_SIZE / 8;
 
+    public static final int HEADER_FONT_SIZE = 48;
+    public static final int BODY_FONT_SIZE = 24;
+
     public static final int PACMAN_SPEED = 5 * 60;
 
     public static final RenderLayer BACKGROUND = new RenderLayer()
