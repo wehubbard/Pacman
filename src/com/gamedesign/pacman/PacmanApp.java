@@ -9,9 +9,11 @@ import com.almasb.fxgl.gameplay.Level;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
+import com.almasb.fxgl.ui.UI;
 import com.gamedesign.pacman.collision.PlayerPelletHandler;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
+import com.gamedesign.pacman.ui.PacmanUIController;
 import javafx.beans.property.IntegerProperty;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -120,7 +122,7 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initUI()
     {
-
+        getGameScene().addUINodes(new PacmanUIController());
     }
 
     public void onPelletPickup()
