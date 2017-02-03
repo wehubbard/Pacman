@@ -1,0 +1,101 @@
+11:17:19.435 [FXGL Launcher Thread     ] DEBUG FXGLLoggerFactory    - Service [LoggerFactory] initialized
+11:17:19.441 [FXGL Launcher Thread     ] DEBUG FXGL                 - FXGL configuration complete
+11:17:19.441 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+11:17:19.444 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+11:17:19.446 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system\fxgl.bundle
+11:17:19.453 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+11:17:19.454 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+11:17:19.454 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2017-01-18T11:24:23.393
+11:17:19.460 [JavaFX Application Thread] DEBUG UpdaterTask          - Checking for updates
+11:17:19.527 [JavaFX Application Thread] DEBUG FXGLEventBus         - Service [EventBus] initialized
+11:17:19.529 [JavaFX Application Thread] DEBUG FXGLExecutor         - Service [Executor] initialized
+11:17:19.531 [JavaFX Application Thread] DEBUG IOTask               - Showing dialog
+11:17:19.533 [FXGL Background Thread 1 ] DEBUG IOTask               - Executing task: openStream(https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml)
+11:17:19.533 [FXGL Background Thread 1 ] DEBUG IOTask               - Executing task: openStream(https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml)
+11:17:20.167 [JavaFX Application Thread] DEBUG IOTask               - fail(): Dismissing dialog
+11:17:20.167 [JavaFX Application Thread] WARN  IOTask               - Task failed: openStream(https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml) Error: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+11:17:20.167 [JavaFX Application Thread] WARN  UpdaterTask          - Failed to find updates: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+11:17:21.354 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+11:17:21.359 [FXGL Launcher Thread     ] DEBUG FXGLExceptionHandler - Service [ExceptionHandler] initialized
+11:17:21.359 [FXGL Launcher Thread     ] DEBUG PreInitTask          - Injecting gameWorld & physicsWorld
+11:17:21.366 [FXGL Launcher Thread     ] DEBUG GameWorld            - Game world initialized
+11:17:21.450 [FXGL Launcher Thread     ] DEBUG FXGLPooler           - Service [Pooler] initialized with default size = 128
+11:17:21.451 [FXGL Launcher Thread     ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=840.0, physics.ppm=50.0
+11:17:21.453 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Service [Input] initialized
+11:17:21.480 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Screenshot - P
+11:17:21.481 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Dev Options - CTRL+0
+11:17:21.484 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Up - W
+11:17:21.485 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Left - A
+11:17:21.485 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Down - S
+11:17:21.485 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Registered new binding: Right - D
+11:17:21.519 [FXGL Launcher Thread     ] DEBUG GameScene            - Game scene initialized: 1040.0x840.0
+11:17:21.523 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Service [AssetLoader] initialized: cacheSize=35
+11:17:21.526 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/sounds/system/notification.wav
+11:17:21.557 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/sounds/menu/select.wav
+11:17:21.559 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/sounds/menu/back.wav
+11:17:21.560 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/sounds/menu/press.wav
+11:17:21.562 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/ui/fonts/Copperplate_Gothic_Light_Regular.ttf
+11:17:21.569 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/ui/css/fxgl.css
+11:17:21.570 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/ui/icons/fxgl_icon.png
+11:17:21.600 [FXGL Launcher Thread     ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/ui/css/fxgl_dark.css
+11:17:21.611 [FXGL Launcher Thread     ] DEBUG FXGLDisplay          - Target size: DoubleProperty [value: 1040.0] x DoubleProperty [value: 840.0] @ 1.0
+11:17:21.611 [FXGL Launcher Thread     ] DEBUG FXGLDisplay          - New size:    1040.0 x 840.0 @ DoubleProperty [value: 1.0]
+11:17:21.612 [FXGL Launcher Thread     ] DEBUG FXGLDisplay          - Service [Display] initialized
+11:17:21.612 [FXGL Launcher Thread     ] DEBUG FXGLDisplay          - Using CSS: CSS(externalForm=jar:file:/C:/Computer%20Science/Game%20Design/3rd/Pacman/lib/fxgl-0.2.9-uber.jar!/assets/ui/css/fxgl_dark.css)
+11:17:21.613 [FXGL Launcher Thread     ] DEBUG InitScenesTask       - Injecting loadingScene & gameScene
+11:17:21.640 [FXGL Launcher Thread     ] DEBUG FXGLMasterTimer      - Service [MasterTimer] initialized
+11:17:21.643 [FXGL Launcher Thread     ] DEBUG FXGLAudioPlayer      - Service [AudioPlayer] initialized
+11:17:21.656 [FXGL Launcher Thread     ] DEBUG GameApplication      - Starting new game
+11:17:21.657 [FXGL Launcher Thread     ] DEBUG GameApplication      - Initializing App
+11:17:21.659 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Clearing active input actions
+11:17:21.660 [FXGL Launcher Thread     ] DEBUG FXGLMasterTimer      - Stopping master timer
+11:17:21.660 [FXGL Launcher Thread     ] DEBUG GameApplication      - State: STARTUP -> PAUSED
+11:17:21.661 [FXGL Launcher Thread     ] DEBUG FXGLEventBus         - Firing event: FXGLEvent[type=PAUSE]
+11:17:21.662 [FXGL Launcher Thread     ] DEBUG FXGLInput            - Clearing active input actions
+11:17:21.662 [FXGL Launcher Thread     ] DEBUG FXGLMasterTimer      - Resetting ticks and clearing all actions
+11:17:21.662 [FXGL Launcher Thread     ] DEBUG GameWorld            - Resetting game world
+11:17:21.662 [FXGL Launcher Thread     ] TRACE EntityWorld          - Resetting entity world
+11:17:21.663 [FXGL Launcher Thread     ] DEBUG PhysicsWorld         - Resetting physics world
+11:17:21.664 [FXGL Launcher Thread     ] DEBUG GameScene            - Resetting game scene
+11:17:21.664 [FXGL Launcher Thread     ] DEBUG FXGLEventBus         - Firing event: FXGLEvent[type=RESET]
+11:17:21.744 [FXGL Launcher Thread     ] DEBUG GameApplication      - State: PAUSED -> LOADING
+11:17:21.786 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Assets
+11:17:21.788 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+11:17:21.795 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/text/level.txt
+11:17:21.941 [JavaFX Application Thread] DEBUG FXGLDisplay          - Showing stage
+11:17:21.941 [JavaFX Application Thread] DEBUG FXGLDisplay          - Root size: 1040.0x840.0
+11:17:21.941 [JavaFX Application Thread] DEBUG FXGLDisplay          - Scene size: 1040.0x840.0
+11:17:21.941 [JavaFX Application Thread] DEBUG FXGLDisplay          - Stage size: 1058.0x885.0
+11:17:22.157 [FXGL Background Thread 1 ] DEBUG GameWorld            - Resetting game world
+11:17:22.158 [FXGL Background Thread 1 ] TRACE EntityWorld          - Resetting entity world
+11:17:22.158 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Resetting physics world
+11:17:22.158 [FXGL Background Thread 1 ] DEBUG GameScene            - Resetting game scene
+11:17:22.158 [FXGL Background Thread 1 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.gameplay.Level@3d1c699c
+11:17:22.159 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+11:17:22.160 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+11:17:22.161 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoader      - Loading from disk: /assets/ui/pacman_ui.fxml
+11:17:22.220 [JavaFX Application Thread] FATAL FXGLExceptionHandler - Uncaught Exception:
+11:17:22.221 [JavaFX Application Thread] FATAL FXGLExceptionHandler - 
+
+Exception occurred: java.lang.NullPointerException : null
+E: com.gamedesign.pacman.PacmanApp.initUI(PacmanApp.java:129)
+E: com.almasb.fxgl.app.InitAppTask.call(InitAppTask.kt:62)
+E: com.almasb.fxgl.app.InitAppTask.call(InitAppTask.kt:38)
+E: javafx.concurrent.Task$TaskCallable.call(Task.java:1423)
+E: java.util.concurrent.FutureTask.run(FutureTask.java:266)
+E: java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+E: java.util.concurrent.FutureTask.run(FutureTask.java:266)
+E: java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+E: java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+E: java.lang.Thread.run(Thread.java:745)
+
+11:17:22.221 [JavaFX Application Thread] FATAL FXGLExceptionHandler - Application will now exit
+11:17:22.222 [JavaFX Application Thread] DEBUG FXGLInput            - Clearing active input actions
+11:17:22.222 [JavaFX Application Thread] DEBUG FXGLMasterTimer      - Stopping master timer
+11:17:22.222 [JavaFX Application Thread] DEBUG GameApplication      - State: LOADING -> PAUSED
+11:17:22.222 [JavaFX Application Thread] DEBUG FXGLEventBus         - Firing event: FXGLEvent[type=PAUSE]
+11:17:35.265 [JavaFX Application Thread] DEBUG FXGLEventBus         - Firing event: FXGLEvent[type=EXIT]
+11:17:35.266 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+11:17:35.270 [JavaFX Application Thread] DEBUG IOTask               - Executing task: writeDataTask(system/fxgl.bundle)
+11:17:35.274 [JavaFX Application Thread] DEBUG FS                   - Writing to: system\fxgl.bundle
+11:17:35.286 [JavaFX Application Thread] DEBUG IOTask               - Task succeeded: writeDataTask(system/fxgl.bundle)

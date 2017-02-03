@@ -2,9 +2,7 @@ package com.gamedesign.pacman;
 
 import com.almasb.fxgl.app.ApplicationMode;
 import com.almasb.fxgl.app.GameApplication;
-import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.GameEntity;
-import com.almasb.fxgl.entity.RenderLayer;
 import com.almasb.fxgl.gameplay.Level;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.parser.TextLevelParser;
@@ -13,10 +11,9 @@ import com.almasb.fxgl.ui.UI;
 import com.gamedesign.pacman.collision.PlayerPelletHandler;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
-import com.gamedesign.pacman.ui.PacmanUIController;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import static com.gamedesign.pacman.Config.*;
 
@@ -102,6 +99,8 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initGame()
     {
+        score = new SimpleIntegerProperty();
+
         TextLevelParser textLevelParser = new TextLevelParser();
         textLevelParser.addEntityProducer('P', EntityFactory::newPlayer);
         textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
@@ -122,7 +121,17 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initUI()
     {
-        getGameScene().addUINodes(new PacmanUIController());
+        PacmanUIController pacmanUIController = new PacmanUIController();
+        getMasterTimer().addUpdateListener(pacmanUIController);
+
+        UI ui = getAssetLoader().loadUI("pacman_ui.fxml", pacmanUIController);
+        ui.getRoot().setTranslateX(MAP_SIZE * BLOCK_SIZE);
+
+        pacmanUIController.getScore()
+                .textProperty()
+                .bind(score.asString("Score:\n[%d]"));
+
+        getGameScene().addUI(ui);
     }
 
     public void onPelletPickup()
