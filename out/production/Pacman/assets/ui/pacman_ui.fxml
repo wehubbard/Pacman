@@ -13,7 +13,7 @@
 
     <Label fx:id="title" text="Title" translateX="0" translateY="0" textFill="greenyellow" />
 
-    <Label fx:id="score" translateY="20" translateZ="200" textFill="white" />
+    <Label fx:id="score" translateX="20" translateY="70" textFill="white" />
 
     <Canvas fx:id="canvas" width="200" height="840" />
 

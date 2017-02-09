@@ -36,8 +36,8 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initSettings(GameSettings gameSettings)
     {
-        gameSettings.setWidth(MAP_SIZE * BLOCK_SIZE + UI_SIZE);
-        gameSettings.setHeight(MAP_SIZE * BLOCK_SIZE);
+        gameSettings.setWidth(MAP_SIZE_X * BLOCK_SIZE + UI_SIZE);
+        gameSettings.setHeight(MAP_SIZE_Y * BLOCK_SIZE);
         gameSettings.setTitle("Pacman");
         gameSettings.setVersion("0.1");
         gameSettings.setFullScreen(false);
@@ -125,18 +125,18 @@ public class PacmanApp extends GameApplication
         getMasterTimer().addUpdateListener(pacmanUIController);
 
         UI ui = getAssetLoader().loadUI("pacman_ui.fxml", pacmanUIController);
-        ui.getRoot().setTranslateX(MAP_SIZE * BLOCK_SIZE);
+        ui.getRoot().setTranslateX(MAP_SIZE_X * BLOCK_SIZE);
 
         pacmanUIController.getScore()
                 .textProperty()
-                .bind(score.asString("Score:\n[%d]"));
+                .bind(score.asString("Score: %d"));
 
         getGameScene().addUI(ui);
     }
 
     public void onPelletPickup()
     {
-
+        score.set(score.get() + 10);
     }
 
     @Override

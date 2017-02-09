@@ -58,6 +58,8 @@ public class EntityFactory
                 .build();
     }
 
+    public static GameEntity newPortal()
+
     public static GameEntity newBackground(Color color)
     {
         double width = FXGL.getApp().getWidth();

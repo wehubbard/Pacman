@@ -11,7 +11,8 @@ public class Config
     public static final KeyCode RIGHT_KEY = KeyCode.D;
 
     public static final int BLOCK_SIZE = 40;
-    public static final int MAP_SIZE = 21;
+    public static final int MAP_SIZE_X = 19;
+    public static final int MAP_SIZE_Y = 21;
     public static final int UI_SIZE = 200;
     public static final int PELLET_SIZE = BLOCK_SIZE / 8;
 
