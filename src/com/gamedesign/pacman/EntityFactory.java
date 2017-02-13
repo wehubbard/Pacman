@@ -12,6 +12,7 @@ import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 
 import static com.gamedesign.pacman.Config.*;
@@ -58,7 +59,24 @@ public class EntityFactory
                 .build();
     }
 
-    public static GameEntity newPortal()
+    public static GameEntity newPortal(double x, double y)
+    {
+        Ellipse ellipse = new Ellipse(BLOCK_SIZE / 2,
+                BLOCK_SIZE / 2,
+                BLOCK_SIZE / 4,
+                BLOCK_SIZE / 2);
+        ellipse.setFill(Color.DEEPPINK);
+
+        EntityView entityView = new EntityView(ellipse);
+        entityView.setRenderLayer(PLAYGROUND);
+
+        return Entities.builder()
+                .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
+                .type(EntityType.PORTAL)
+                .viewFromNodeWithBBox(entityView)
+                .with(new CollidableComponent(true))
+                .build();
+    }
 
     public static GameEntity newBackground(Color color)
     {

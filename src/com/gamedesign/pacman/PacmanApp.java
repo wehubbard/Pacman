@@ -105,6 +105,7 @@ public class PacmanApp extends GameApplication
         textLevelParser.addEntityProducer('P', EntityFactory::newPlayer);
         textLevelParser.addEntityProducer('B', EntityFactory::newBlock);
         textLevelParser.addEntityProducer(' ', EntityFactory::newPellet);
+        textLevelParser.addEntityProducer('O', EntityFactory::newPortal);
 
         Level level = textLevelParser.parse("level.txt");
 

@@ -7,7 +7,7 @@ B    B       B    B
 BBBB BBB   BBB BBBB
    B B       B B  B
 BBBB B B   B B BBBB
-       B   B
+O      B   B      O
 BBBB B BBBBB B BBBB
    B B       B B
 BBBB B BBBBB B BBBB
