@@ -10,6 +10,7 @@ import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
+import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
@@ -22,7 +23,7 @@ public class EntityFactory
     public static GameEntity newPlayer(double x, double y)
     {
         return Entities.builder()
-                .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
+                .at(new Point2D(x * BLOCK_SIZE, y * BLOCK_SIZE).add(PACMAN_OFFSET))
                 .type(EntityType.PLAYER)
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
                 .viewFromNode(new Circle(BLOCK_SIZE / 2 - 2, Color.YELLOW))
@@ -61,14 +62,14 @@ public class EntityFactory
 
     public static GameEntity newPortal(double x, double y)
     {
-        Ellipse ellipse = new Ellipse(BLOCK_SIZE / 2,
-                BLOCK_SIZE / 2,
-                BLOCK_SIZE / 4,
-                BLOCK_SIZE / 2);
-        ellipse.setFill(Color.DEEPPINK);
+//        Ellipse ellipse = new Ellipse(BLOCK_SIZE / 2,
+//                BLOCK_SIZE / 2,
+//                BLOCK_SIZE / 4,
+//                BLOCK_SIZE / 2);
+//        ellipse.setFill(Color.DEEPPINK);
 
-        EntityView entityView = new EntityView(ellipse);
-        //EntityView entityView = new EntityView(new Rectangle());
+        //EntityView entityView = new EntityView(ellipse);
+        EntityView entityView = new EntityView(new Rectangle(BLOCK_SIZE, BLOCK_SIZE));
         entityView.setRenderLayer(PLAYGROUND);
 
         return Entities.builder()

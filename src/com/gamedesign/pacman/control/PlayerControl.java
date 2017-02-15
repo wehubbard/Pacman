@@ -34,15 +34,22 @@ public class PlayerControl extends AbstractControl
 
         String side = getSide();
         if(!side.isEmpty())
-            gameEntity.setPosition(getPortal(side).getPosition());
+            gameEntity.setPosition(
+                    getPortal(side)
+                            .getPosition()
+                            .add(PACMAN_OFFSET));
     }
 
     private String getSide()
     {
-        if(gameEntity.getX() <= -gameEntity.getWidth())
+        if(gameEntity.getX() <= -BLOCK_SIZE)
             return "Left";
         else if(gameEntity.getX() >= MAP_SIZE_X * BLOCK_SIZE)
             return "Right";
+        else if(gameEntity.getY() <= -BLOCK_SIZE)
+            return "Top";
+        else if(gameEntity.getY() >= MAP_SIZE_Y * BLOCK_SIZE)
+            return "Bottom";
 
         return "";
     }
@@ -62,18 +69,24 @@ public class PlayerControl extends AbstractControl
         HashMap<String, GameEntity> portals = new HashMap<>();
 
         for(GameEntity portal : portals())
-            if(portal.getX() <= portal.getWidth())
+            if(portal.getX() <= BLOCK_SIZE)
                 portals.put("Left", portal);
-            else if(portal.getX() >= MAP_SIZE_X * BLOCK_SIZE - portal.getWidth())
+            else if(portal.getX() >= MAP_SIZE_X * BLOCK_SIZE - BLOCK_SIZE)
                 portals.put("Right", portal);
-
-        System.out.println(portals);
+            else if(portal.getY() <= BLOCK_SIZE)
+                portals.put("Top", portal);
+            else if(portal.getY() >= MAP_SIZE_Y * BLOCK_SIZE - BLOCK_SIZE)
+                portals.put("Bottom", portal);
 
         switch(side)
         {
             case "Left": return portals.get("Right");
-            default: return portals.get("Left");
+            case "Right": return portals.get("Left");
+            case "Top": return portals.get("Bottom");
+            case "Bottom": return portals.get("Top");
         }
+
+        return null;
     }
 
     public void up()

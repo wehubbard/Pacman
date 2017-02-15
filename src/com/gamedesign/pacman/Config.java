@@ -1,6 +1,7 @@
 package com.gamedesign.pacman;
 
 import com.almasb.fxgl.entity.RenderLayer;
+import javafx.geometry.Point2D;
 import javafx.scene.input.KeyCode;
 
 public class Config
@@ -20,6 +21,7 @@ public class Config
     public static final int BODY_FONT_SIZE = 24;
 
     public static final int PACMAN_SPEED = 5 * 60;
+    public static final Point2D PACMAN_OFFSET = new Point2D(1, 1);
 
     public static final RenderLayer BACKGROUND = new RenderLayer()
     {
