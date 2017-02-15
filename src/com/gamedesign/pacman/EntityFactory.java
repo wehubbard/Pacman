@@ -68,6 +68,7 @@ public class EntityFactory
         ellipse.setFill(Color.DEEPPINK);
 
         EntityView entityView = new EntityView(ellipse);
+        //EntityView entityView = new EntityView(new Rectangle());
         entityView.setRenderLayer(PLAYGROUND);
 
         return Entities.builder()

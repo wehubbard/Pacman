@@ -7,8 +7,11 @@ import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.GameEntity;
 import com.gamedesign.pacman.MoveDirection;
 import com.gamedesign.pacman.type.EntityType;
+import javafx.geometry.Point2D;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.gamedesign.pacman.Config.*;
 
@@ -28,6 +31,49 @@ public class PlayerControl extends AbstractControl
     public void onUpdate(Entity entity, double v)
     {
         this.v = v;
+
+        String side = getSide();
+        if(!side.isEmpty())
+            gameEntity.setPosition(getPortal(side).getPosition());
+    }
+
+    private String getSide()
+    {
+        if(gameEntity.getX() <= -gameEntity.getWidth())
+            return "Left";
+        else if(gameEntity.getX() >= MAP_SIZE_X * BLOCK_SIZE)
+            return "Right";
+
+        return "";
+    }
+
+    private List<GameEntity> portals()
+    {
+        return FXGL.getApp()
+                .getGameWorld()
+                .getEntitiesByType(EntityType.PORTAL)
+                .stream()
+                .map(e -> (GameEntity) e)
+                .collect(Collectors.toList());
+    }
+
+    private GameEntity getPortal(String side)
+    {
+        HashMap<String, GameEntity> portals = new HashMap<>();
+
+        for(GameEntity portal : portals())
+            if(portal.getX() <= portal.getWidth())
+                portals.put("Left", portal);
+            else if(portal.getX() >= MAP_SIZE_X * BLOCK_SIZE - portal.getWidth())
+                portals.put("Right", portal);
+
+        System.out.println(portals);
+
+        switch(side)
+        {
+            case "Left": return portals.get("Right");
+            default: return portals.get("Left");
+        }
     }
 
     public void up()
