@@ -5,9 +5,10 @@ import com.almasb.ents.Entity;
 import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.GameEntity;
+import com.almasb.fxgl.time.LocalTimer;
 import com.gamedesign.pacman.MoveDirection;
 import com.gamedesign.pacman.type.EntityType;
-import javafx.geometry.Point2D;
+import javafx.util.Duration;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,17 +21,29 @@ public class PlayerControl extends AbstractControl
     private GameEntity gameEntity;
     private MoveDirection moveDirection;
     private double v;
+    private LocalTimer localTimer;
+    private int i;
 
     @Override
     public void onAdded(Entity entity)
     {
         gameEntity = (GameEntity) entity;
+        localTimer = FXGL.newLocalTimer();
+        localTimer.capture();
     }
 
     @Override
     public void onUpdate(Entity entity, double v)
     {
         this.v = v;
+
+        if(localTimer.elapsed(Duration.millis(100)))
+        {
+            i = (i + 1) % PACMAN_TEXTURES.length;
+            gameEntity.getMainViewComponent()
+                    .setTexture(PACMAN_TEXTURES[i]);
+            localTimer.capture();
+        }
 
         String side = getSide();
         if(!side.isEmpty())

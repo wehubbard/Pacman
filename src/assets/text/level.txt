@@ -1,11 +1,11 @@
 BBBBBBBBBBBBBBBOBBB
-B        B     P  B
+B        B        B
 B BB BBB B BBB BB B
 B                 B
 B BB B BBBBB B BB B
 B    B       B    B
 BBBB BBB   BBB BBBB
-BBB B B      B BBBB
+BBBB B       B BBBB
 BBBB B B   B B BBBB
 O      B   B      O
 BBBB B BBBBB B BBBB
@@ -13,7 +13,7 @@ BBBB B       B BBBB
 BBBB B BBBBB B BBBB
 B        B        B
 B BB BBB B BBB BB B
-B  B           B  B
+B  B     P     B  B
 BB B B BBBBB B B BB
 B    B   B   B    B
 B BBBBBB B BBBBBB B
