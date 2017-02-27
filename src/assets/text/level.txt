@@ -5,7 +5,7 @@ B                 B
 B BB B BBBBB B BB B
 B    B       B    B
 BBBB BBB   BBB BBBB
-BBBB B       B BBBB
+BBBB B   b   B BBBB
 BBBB B B   B B BBBB
 O      B   B      O
 BBBB B BBBBB B BBBB

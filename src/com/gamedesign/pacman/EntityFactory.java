@@ -7,7 +7,9 @@ import com.almasb.fxgl.entity.GameEntity;
 import com.almasb.fxgl.entity.component.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
+import com.gamedesign.pacman.component.SubTypeComponent;
 import com.gamedesign.pacman.control.PlayerControl;
+import com.gamedesign.pacman.type.EnemyType;
 import com.gamedesign.pacman.type.EntityType;
 import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
@@ -24,9 +26,21 @@ public class EntityFactory
                 .at(new Point2D(x * BLOCK_SIZE, y * BLOCK_SIZE).add(PACMAN_OFFSET))
                 .type(EntityType.PLAYER)
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
-                .viewFromNode(new Circle(BLOCK_SIZE / 2 - 2, Color.YELLOW))
+                .viewFromTexture(PACMAN_TEXTURES[0])
                 .with(new CollidableComponent(true))
                 .with(new PlayerControl())
+                .build();
+    }
+
+    public static GameEntity newBlinky(double x, double y)
+    {
+        return Entities.builder()
+                .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
+                .type(EntityType.ENEMY)
+                .with(new SubTypeComponent(EnemyType.BLINKY))
+                .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
+                .viewFromTexture(BLINKY_RIGHT_TEXTURES[0])
+                .with(new CollidableComponent(true))
                 .build();
     }
 
