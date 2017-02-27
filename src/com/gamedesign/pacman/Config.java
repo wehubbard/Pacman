@@ -20,7 +20,7 @@ public class Config
     public static final int TITLE_FONT_SIZE = 48;
     public static final int BODY_FONT_SIZE = 24;
 
-    public static final int PACMAN_SPEED = 5 * 60;
+    public static final int PACMAN_SPEED = 3;
     public static final Point2D PACMAN_OFFSET = new Point2D(1, 1);
     public static final String[] PACMAN_TEXTURES = {"pacman00.png", "pacman01.png", "pacman02.png"};
 

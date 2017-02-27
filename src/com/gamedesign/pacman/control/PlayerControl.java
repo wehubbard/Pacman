@@ -19,7 +19,7 @@ import static com.gamedesign.pacman.Config.*;
 public class PlayerControl extends AbstractControl
 {
     private GameEntity gameEntity;
-    private MoveDirection moveDirection;
+    private MoveDirection moveDirection, bufferedDirection;
     private double v;
     private LocalTimer localTimer;
     private int i;
@@ -30,12 +30,25 @@ public class PlayerControl extends AbstractControl
         gameEntity = (GameEntity) entity;
         localTimer = FXGL.newLocalTimer();
         localTimer.capture();
+        moveDirection = MoveDirection.RIGHT;
     }
 
     @Override
     public void onUpdate(Entity entity, double v)
     {
         this.v = v;
+
+        if(bufferedDirection != null && canMove(bufferedDirection))
+        {
+            gameEntity.getRotationComponent()
+                    .setValue(bufferedDirection.ROTATION);
+            moveDirection = bufferedDirection;
+            bufferedDirection = null;
+        }
+
+        if(canMove(moveDirection))
+            gameEntity.getPositionComponent()
+                    .translate(moveDirection.DIRECTION.multiply(PACMAN_SPEED));
 
         if(localTimer.elapsed(Duration.millis(100)))
         {
@@ -104,77 +117,50 @@ public class PlayerControl extends AbstractControl
 
     public void up()
     {
-        moveDirection = MoveDirection.UP;
-        //move(0, -5 * speed);
-        move(0, -1 * v * PACMAN_SPEED);
-        gameEntity.getRotationComponent().setValue(270);
-        gameEntity.getView().setScaleX(1);
+        bufferedDirection = MoveDirection.UP;
     }
 
     public void left()
     {
-        moveDirection = MoveDirection.LEFT;
-        move(-1 * v * PACMAN_SPEED, 0);
-        gameEntity.getRotationComponent().setValue(0);
-        gameEntity.getView().setScaleX(-1);
+        bufferedDirection = MoveDirection.LEFT;
     }
 
     public void down()
     {
-        moveDirection = MoveDirection.DOWN;
-        move(0, 1 * v * PACMAN_SPEED);
-        gameEntity.getRotationComponent().setValue(90);
-        gameEntity.getView().setScaleX(1);
+        bufferedDirection = MoveDirection.DOWN;
     }
 
     public void right()
     {
-        moveDirection = MoveDirection.RIGHT;
-        move(1 * v * PACMAN_SPEED, 0);
-        gameEntity.getRotationComponent().setValue(0);
-        gameEntity.getView().setScaleX(1);
+        bufferedDirection = MoveDirection.RIGHT;
     }
 
 
     private List<Entity> blocks;
 
-    private void move(double dx, double dy)
+    private boolean canMove(MoveDirection moveDirection)
     {
-        if(!getEntity().isActive())
-            return;
-
         if(blocks == null)
             blocks = FXGL.getApp().getGameWorld()
                     .getEntitiesByType(EntityType.BLOCK);
 
-        double magnitude = Math.sqrt(dx * dx + dy * dy);
-        long length = Math.round(magnitude);
+        gameEntity.getPositionComponent()
+                .translate(moveDirection.DIRECTION.multiply(PACMAN_SPEED));
 
-        double x = dx / magnitude;
-        double y = dy / magnitude;
+        boolean canMove = true;
 
-        for(int i = 0; i < length; i++)
-        {
-            gameEntity.getPositionComponent().translate(x, y);
-
-            boolean collision = false;
-
-            for (Entity block : blocks)
+        for(Entity block : blocks)
+            if(gameEntity.getBoundingBoxComponent()
+                    .isCollidingWith(Entities.getBBox(block)))
             {
-                if(Entities.getBBox(block)
-                        .isCollidingWith(gameEntity.getBoundingBoxComponent()))
-                {
-                    collision = true;
-                    break;
-                }
-            }
-
-            if(collision)
-            {
-                gameEntity.getPositionComponent().translate(-x, -y);
+                canMove = false;
                 break;
             }
-        }
+
+        gameEntity.getPositionComponent()
+                .translate(moveDirection.DIRECTION.multiply(-PACMAN_SPEED));
+
+        return canMove;
     }
 }
 
