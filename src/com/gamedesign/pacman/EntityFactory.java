@@ -8,6 +8,7 @@ import com.almasb.fxgl.entity.component.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.gamedesign.pacman.component.SubTypeComponent;
+import com.gamedesign.pacman.control.EnemyControl;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EnemyType;
 import com.gamedesign.pacman.type.EntityType;
@@ -41,6 +42,7 @@ public class EntityFactory
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
                 .viewFromTexture(BLINKY_RIGHT_TEXTURES[0])
                 .with(new CollidableComponent(true))
+                .with(new EnemyControl())
                 .build();
     }
 

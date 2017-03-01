@@ -24,7 +24,10 @@ public class Config
     public static final Point2D PACMAN_OFFSET = new Point2D(1, 1);
     public static final String[] PACMAN_TEXTURES = {"pacman00.png", "pacman01.png", "pacman02.png"};
 
-    public static final String[] BLINKY_RIGHT_TEXTURES = {"blinky00.png"};
+    public static final String[] BLINKY_RIGHT_TEXTURES = {"blinkyRight00.png", "blinkyRight01.png"};
+    public static final String[] BLINKY_LEFT_TEXTURES = {"blinkyLeft00.png", "blinkyLeft01.png"};
+    public static final String[] BLINKY_UP_TEXTURES = {"blinkyTop00.png", "blinkyTop01.png"};
+    public static final String[] BLINKY_DOWN_TEXTURES = {"blinkyBottom00.png", "blinkyBottom01.png"};
 
     public static final RenderLayer BACKGROUND = new RenderLayer()
     {
