@@ -7,6 +7,7 @@ import com.almasb.fxgl.entity.GameEntity;
 import com.almasb.fxgl.entity.component.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
+import com.almasb.fxgl.physics.PhysicsComponent;
 import com.gamedesign.pacman.component.SubTypeComponent;
 import com.gamedesign.pacman.control.EnemyControl;
 import com.gamedesign.pacman.control.PlayerControl;
@@ -16,6 +17,7 @@ import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import org.jbox2d.dynamics.BodyType;
 
 import static com.gamedesign.pacman.Config.*;
 
@@ -35,6 +37,9 @@ public class EntityFactory
 
     public static GameEntity newBlinky(double x, double y)
     {
+        PhysicsComponent physicsComponent = new PhysicsComponent();
+        physicsComponent.setBodyType(BodyType.KINEMATIC);
+
         return Entities.builder()
                 .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
                 .type(EntityType.ENEMY)
@@ -42,6 +47,7 @@ public class EntityFactory
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
                 .viewFromTexture(BLINKY_RIGHT_TEXTURES[0])
                 .with(new CollidableComponent(true))
+                .with(physicsComponent)
                 .with(new EnemyControl())
                 .build();
     }

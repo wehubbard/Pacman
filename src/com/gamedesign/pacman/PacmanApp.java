@@ -9,10 +9,12 @@ import com.almasb.fxgl.parser.TextLevelParser;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.ui.UI;
 import com.gamedesign.pacman.collision.PlayerPelletHandler;
+import com.gamedesign.pacman.control.EnemyControl;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 
 import static com.gamedesign.pacman.Config.*;
@@ -31,6 +33,18 @@ public class PacmanApp extends GameApplication
     public PlayerControl playerControl()
     {
         return player().getControlUnsafe(PlayerControl.class);
+    }
+
+    public GameEntity blinky()
+    {
+        return (GameEntity) getGameWorld()
+                .getEntitiesByType(EntityType.ENEMY)
+                .get(0);
+    }
+
+    public EnemyControl enemyControl()
+    {
+        return blinky().getControlUnsafe(EnemyControl.class);
     }
 
     @Override
@@ -88,6 +102,42 @@ public class PacmanApp extends GameApplication
                 playerControl().right();
             }
         }, RIGHT_KEY);
+
+        getInput().addAction(new UserAction("Blinky Up")
+        {
+            @Override
+            protected void onAction()
+            {
+                enemyControl().move(0, -50);
+            }
+        }, KeyCode.UP);
+
+        getInput().addAction(new UserAction("Blinky Left")
+        {
+            @Override
+            protected void onAction()
+            {
+                enemyControl().move(-50, 0);
+            }
+        }, KeyCode.LEFT);
+
+        getInput().addAction(new UserAction("Blinky Right")
+        {
+            @Override
+            protected void onAction()
+            {
+                enemyControl().move(50, 0);
+            }
+        }, KeyCode.RIGHT);
+
+        getInput().addAction(new UserAction("Blinky Down")
+        {
+            @Override
+            protected void onAction()
+            {
+                enemyControl().move(0, 50);
+            }
+        }, KeyCode.DOWN);
     }
 
     @Override

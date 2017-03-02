@@ -4,11 +4,13 @@ import com.almasb.ents.AbstractControl;
 import com.almasb.ents.Entity;
 import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.entity.GameEntity;
+import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.time.LocalTimer;
 import com.gamedesign.pacman.Config;
 import com.gamedesign.pacman.MoveDirection;
 import com.gamedesign.pacman.component.SubTypeComponent;
 import com.gamedesign.pacman.type.EnemyType;
+import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -47,6 +49,26 @@ public class EnemyControl extends AbstractControl
             updateTexture();
             localTimer.capture();
         }
+        updateMoveDirection();
+    }
+
+    private void updateMoveDirection()
+    {
+        Point2D point2D =
+                gameEntity.getComponentUnsafe(PhysicsComponent.class)
+                .getLinearVelocity();
+
+        double dx = point2D.getX();
+        double dy = point2D.getY();
+
+        if(dx > 0)
+            moveDirection = MoveDirection.RIGHT;
+        else if(dx < 0)
+            moveDirection = MoveDirection.LEFT;
+        else if(dy > 0)
+            moveDirection = MoveDirection.DOWN;
+        else if(dy < 0)
+            moveDirection = MoveDirection.UP;
     }
 
     protected void updateTexture()
@@ -66,6 +88,15 @@ public class EnemyControl extends AbstractControl
                 .setView(imageView);
 
         i = (i + 1) % textures.length;
+    }
+
+    public void move(double dx, double dy)
+    {
+//        gameEntity.getPositionComponent()
+//                .translate(new Point2D(dx, dy));
+
+        gameEntity.getComponentUnsafe(PhysicsComponent.class)
+                .setLinearVelocity(dx, dy);
     }
 }
 
