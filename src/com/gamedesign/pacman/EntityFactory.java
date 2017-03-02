@@ -10,6 +10,7 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.gamedesign.pacman.component.SubTypeComponent;
 import com.gamedesign.pacman.control.EnemyControl;
+import com.gamedesign.pacman.control.MoveControl;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EnemyType;
 import com.gamedesign.pacman.type.EntityType;
@@ -37,17 +38,13 @@ public class EntityFactory
 
     public static GameEntity newBlinky(double x, double y)
     {
-        PhysicsComponent physicsComponent = new PhysicsComponent();
-        physicsComponent.setBodyType(BodyType.KINEMATIC);
-
         return Entities.builder()
-                .at(x * BLOCK_SIZE, y * BLOCK_SIZE)
+                .at(new Point2D(x * BLOCK_SIZE, y * BLOCK_SIZE).add(PACMAN_OFFSET))
                 .type(EntityType.ENEMY)
                 .with(new SubTypeComponent(EnemyType.BLINKY))
                 .bbox(new HitBox("BODY", BoundingShape.circle(BLOCK_SIZE / 2 - 2)))
                 .viewFromTexture(BLINKY_RIGHT_TEXTURES[0])
                 .with(new CollidableComponent(true))
-                .with(physicsComponent)
                 .with(new EnemyControl())
                 .build();
     }

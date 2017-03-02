@@ -17,58 +17,13 @@ import javafx.util.Duration;
 
 import java.lang.reflect.Field;
 
-public class EnemyControl extends AbstractControl
+public class EnemyControl extends MoveControl
 {
-    protected GameEntity gameEntity;
-    protected String[] textures;
-    protected int i;
-    protected MoveDirection moveDirection;
-    private LocalTimer localTimer;
-
     private EnemyType enemyType()
     {
         return (EnemyType) gameEntity
                 .getComponentUnsafe(SubTypeComponent.class)
                 .getValue();
-    }
-
-    @Override
-    public void onAdded(Entity entity)
-    {
-        gameEntity = (GameEntity) entity;
-        moveDirection = MoveDirection.RIGHT;
-        localTimer = FXGL.newLocalTimer();
-        localTimer.capture();
-    }
-
-    @Override
-    public void onUpdate(Entity entity, double v)
-    {
-        if(localTimer.elapsed(Duration.millis(250)))
-        {
-            updateTexture();
-            localTimer.capture();
-        }
-        updateMoveDirection();
-    }
-
-    private void updateMoveDirection()
-    {
-        Point2D point2D =
-                gameEntity.getComponentUnsafe(PhysicsComponent.class)
-                .getLinearVelocity();
-
-        double dx = point2D.getX();
-        double dy = point2D.getY();
-
-        if(dx > 0)
-            moveDirection = MoveDirection.RIGHT;
-        else if(dx < 0)
-            moveDirection = MoveDirection.LEFT;
-        else if(dy > 0)
-            moveDirection = MoveDirection.DOWN;
-        else if(dy < 0)
-            moveDirection = MoveDirection.UP;
     }
 
     protected void updateTexture()
@@ -88,15 +43,6 @@ public class EnemyControl extends AbstractControl
                 .setView(imageView);
 
         i = (i + 1) % textures.length;
-    }
-
-    public void move(double dx, double dy)
-    {
-//        gameEntity.getPositionComponent()
-//                .translate(new Point2D(dx, dy));
-
-        gameEntity.getComponentUnsafe(PhysicsComponent.class)
-                .setLinearVelocity(dx, dy);
     }
 }
 

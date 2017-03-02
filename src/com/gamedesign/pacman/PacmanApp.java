@@ -10,6 +10,7 @@ import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.ui.UI;
 import com.gamedesign.pacman.collision.PlayerPelletHandler;
 import com.gamedesign.pacman.control.EnemyControl;
+import com.gamedesign.pacman.control.MoveControl;
 import com.gamedesign.pacman.control.PlayerControl;
 import com.gamedesign.pacman.type.EntityType;
 import javafx.beans.property.IntegerProperty;
@@ -64,8 +65,8 @@ public class PacmanApp extends GameApplication
     @Override
     protected void initInput()
     {
-//        PlayerControl playerControl =
-//                player().getControlUnsafe(PlayerControl.class);
+//        MoveControl playerControl =
+//                player().getControlUnsafe(MoveControl.class);
 
         getInput().addAction(new UserAction("Up")
         {
@@ -108,7 +109,7 @@ public class PacmanApp extends GameApplication
             @Override
             protected void onAction()
             {
-                enemyControl().move(0, -50);
+                enemyControl().up();
             }
         }, KeyCode.UP);
 
@@ -117,7 +118,7 @@ public class PacmanApp extends GameApplication
             @Override
             protected void onAction()
             {
-                enemyControl().move(-50, 0);
+                enemyControl().left();
             }
         }, KeyCode.LEFT);
 
@@ -126,7 +127,7 @@ public class PacmanApp extends GameApplication
             @Override
             protected void onAction()
             {
-                enemyControl().move(50, 0);
+                enemyControl().right();;
             }
         }, KeyCode.RIGHT);
 
@@ -135,7 +136,7 @@ public class PacmanApp extends GameApplication
             @Override
             protected void onAction()
             {
-                enemyControl().move(0, 50);
+                enemyControl().down();
             }
         }, KeyCode.DOWN);
     }
